@@ -1,0 +1,1 @@
+CREATE DATABASE linx_challenge

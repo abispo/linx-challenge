@@ -3,7 +3,6 @@ import aiohttp
 from decouple import config
 from typing import Dict
 
-
 API_KEY = config('OPENWEATHER_API_KEY')
 API_URL = config('OPENWEATHER_API_URL')
 
