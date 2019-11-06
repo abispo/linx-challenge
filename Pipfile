@@ -12,6 +12,7 @@ requests = "*"
 aiosqlite = "*"
 pytest-asyncio = "*"
 travis-encrypt = "*"
+codecov = "*"
 
 [packages]
 fastapi = "*"
