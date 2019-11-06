@@ -10,7 +10,7 @@ install:
   - pipenv install --dev --system
 
 script:
-  - pytest --cov-report term --cov=app tests/ --disable-warnings
+  - pytest --cov=app tests/ --disable-warnings
 
 env:
   - OPENWEATHER_API_URL=http://api.openweathermap.org/data/2.5/forecast LINX_CHALLENGE_TESTING=True
