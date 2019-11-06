@@ -70,3 +70,12 @@ Execute o comando abaixo no terminal:
 ```bash
 pipenv run pytest --cov=app tests/ --disable-warnings
 ```
+
+### Principais libs
+> - FastAPI
+> - encode/databases
+> - encode/orm
+> - pytest
+> - python-decouple
+
+Escolhi a FastAPI por ela usar a sintaxe async/await do Python 3.4+, ou seja, pois segue o modelo do Python para desenvolvimento de programas que usam assincronia. E também por ser um framework Flask-like. O projeto poderia ter sido desenvolvido inteiramente em Flask, mas isso foi mais um gosto pessoal. Utilizei também o pytest para rodar os testes da aplicação. O python-decouple foi utilizado para ler variáveis de ambiente necessárias ao sistema.
