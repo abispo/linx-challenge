@@ -4,5 +4,11 @@ import sqlalchemy
 
 from decouple import config
 
-database = databases.Database(config('DATABASE_URL'))
+TESTING = config('LINX_CHALLENGE_TESTING', cast=bool)
+
+if TESTING:
+    database = databases.Database('sqlite:///test.db', force_rollback=True)
+else:
+    database = databases.Database(config('DATABASE_URL'))
+
 metadata = sqlalchemy.MetaData()

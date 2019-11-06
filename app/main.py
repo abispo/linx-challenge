@@ -28,16 +28,19 @@ async def http_exception_handler(request, exc):
         content={"error_message": f"{exc}"}
     )
 
+
 @app.on_event("startup")
 async def startup():
     await database.connect()
+
 
 @app.on_event("shutdown")
 async def shutdown():
     await database.disconnect()
 
-@app.get("/city/{city}")
-async def index(city: str, request: Request):
+
+@app.post("/city/{city}")
+async def post_city(city: str, request: Request):
     async with aiohttp.ClientSession() as session:
         start_time = datetime.now()
 
@@ -50,11 +53,21 @@ async def index(city: str, request: Request):
                 timestamp_start=datetime.timestamp(start_time),
                 timestamp_end=datetime.timestamp(end_time),
                 ip_address=request.client.host,
-                api_response=response
+                api_response=response,
+                city=city
             )
+
         except Exception as e:
             raise SQLAlchemyError(str(e))
 
         api_response_schema = APIResponseSchema.from_orm(api_response)
 
         return api_response_schema
+
+
+@app.get("/city/{city}")
+async def get_city(city: str, limit: int = 10):
+
+    results = await APIResponse.objects.limit(limit).filter(
+        city=city).all()
+    return results

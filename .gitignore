@@ -128,5 +128,5 @@ https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
 # Visual Studio code
 .vscode/
 
-# json
-*.json
+# SQLite Database
+*.db
