@@ -13,7 +13,7 @@ script:
   - pytest --cov=app tests/ --disable-warnings
 
 env:
-  - OPENWEATHER_API_URL=http://api.openweathermap.org/data/2.5/forecast LINX_CHALLENGE_TESTING=True
+  - OPENWEATHER_API_URL=http://api.openweathermap.org/data/2.5/forecast LINX_CHALLENGE_TESTING=True CODECOV_TOKEN=0261f2e7-714d-4833-81de-6cffa1f8074b
 
 after_success:
   - codecov
