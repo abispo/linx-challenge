@@ -11,6 +11,7 @@ nest-asyncio = "*"
 requests = "*"
 aiosqlite = "*"
 pytest-asyncio = "*"
+travis-encrypt = "*"
 
 [packages]
 fastapi = "*"

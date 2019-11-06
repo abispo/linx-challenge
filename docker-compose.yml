@@ -8,6 +8,8 @@ services:
       context: .
     ports:
       - "8000:8000"
+    depends_on:
+      - postgresql
 
   postgresql:
     build:
@@ -24,3 +26,5 @@ services:
     restart: always
     ports:
       - 8080:8080
+    depends_on:
+      - postgresql
