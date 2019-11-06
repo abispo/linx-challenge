@@ -68,7 +68,7 @@ pipenv run uvicorn app.main:app --reload
 ### Executando os testes pelo pipenv
 Execute o comando abaixo no terminal:
 ```bash
-pipenv run pytest --cov=app tests/ --disable-warnings
+LINX_CHALLENGE_TESTING=True pipenv run pytest --cov=app tests/ --disable-warnings
 ```
 
 ### Principais libs
