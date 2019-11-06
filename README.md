@@ -12,8 +12,6 @@ git clone https://github.com/abispo/linx-challenge.git
 cd linx-challenge
 ```
 
-docker exec -e LINX_CHALLENGE_TESTING=True -it linx_challenge pipenv run pytest --cov=app tests/
-
 Crie o arquivo `.env` no diretório raiz do projeto com o seguinte conteúdo:
 ```
 OPENWEATHER_API_KEY=<API_KEY>
