@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest-env = "*"
+pytest-cov = "*"
+asynctest = "*"
+nest-asyncio = "*"
+requests = "*"
+aiosqlite = "*"
+pytest-asyncio = "*"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+aiohttp = "*"
+databases = "*"
+orm = "*"
+python-decouple = "*"
+asyncpg = "*"
+psycopg2 = "*"
+
+[requires]
+python_version = "3.6"

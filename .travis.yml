@@ -1,0 +1,19 @@
+language: python
+
+python:
+
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install pipenv
+  - pipenv install --dev --system
+
+script:
+  - pytest --cov-report term --cov=app tests/ --disable-warnings
+
+env:
+  - CRAWLY_APP_URL=http://applicant-test.us-east-1.elasticbeanstalk.com CODECOV_TOKEN=ac776307-e730-469f-b038-21f9f8c628e4
+
+after_success:
+  - codecov
