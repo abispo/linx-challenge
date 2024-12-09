@@ -1,4 +1,4 @@
-FROM python:3.12.0b3
+FROM python:3.14.0a2
 
 COPY . /app
 
